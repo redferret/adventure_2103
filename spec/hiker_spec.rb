@@ -14,5 +14,10 @@ describe Hiker do
       expect(hiker.name).to eq 'Dora'
       expect(hiker.experience_level).to eq(:moderate)
     end
+
+    it 'has snacks' do
+      hiker = Hiker.new('Dora', :moderate)
+      expect(hiker.snacks).to eq({})
+    end
   end
 end
