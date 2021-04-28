@@ -95,9 +95,9 @@ describe Park do
       park.add_trail(trail6)
 
       expected_trails_by_level = {
-        easy: [],
-        moderate: [],
-        strenuous: []
+        easy: [trail1, trail2, trail3],
+        moderate: [trail4, trail5],
+        strenuous: [trail6]
       }
 
       expect(park.trails_by_level).to eq expected_trails_by_level

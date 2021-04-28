@@ -21,5 +21,12 @@ class Park
   end
 
   def trails_by_level
+    levels = [:easy, :moderate, :strenuous]
+
+    levels.each_with_object({}) do |level, hash|
+      hash[level] = @trails.find_all do |trail|
+        trail.level == level
+      end
+    end
   end
 end
