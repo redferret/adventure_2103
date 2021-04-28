@@ -75,4 +75,32 @@ describe Park do
       expect(park.hikable_miles).to eq expected_length
     end
   end
+
+  describe '#trails_by_level' do
+    it 'returns lists of trails by their level' do
+      park = Park.new('Capitol Reef')
+
+      trail1 = instance_double('Trail', level: :easy)
+      trail2 = instance_double('Trail', level: :easy)
+      trail3 = instance_double('Trail', level: :easy)
+      trail4 = instance_double('Trail', level: :moderate)
+      trail5 = instance_double('Trail', level: :moderate)
+      trail6 = instance_double('Trail', level: :strenuous)
+
+      park.add_trail(trail1)
+      park.add_trail(trail2)
+      park.add_trail(trail3)
+      park.add_trail(trail4)
+      park.add_trail(trail5)
+      park.add_trail(trail6)
+
+      expected_trails_by_level = {
+        easy: [],
+        moderate: [],
+        strenuous: []
+      }
+
+      expect(park.trails_by_level).to eq expected_trails_by_level
+    end
+  end
 end
