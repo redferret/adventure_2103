@@ -15,4 +15,7 @@ class Hiker
   def visit(park)
     @parks_visited << park
   end
+
+  def favorite_snack
+  end
 end

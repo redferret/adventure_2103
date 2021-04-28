@@ -59,4 +59,19 @@ describe Hiker do
       expect(hiker.parks_visited).to eq expected_visited
     end
   end
+
+  describe '#favorite_snack' do
+    it 'returns a favorite snack based on max quantity' do
+      hiker = Hiker.new('Dora', :moderate)
+
+      hiker.pack('water', 1)
+      hiker.pack('trail mix', 3)
+      hiker.pack('apple', 2)
+      hiker.pack('beef', 112)
+
+      expected = 'beef'
+
+      expect(hiker.favorite_snack).to eq expected
+    end
+  end
 end
