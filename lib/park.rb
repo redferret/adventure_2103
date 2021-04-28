@@ -7,5 +7,6 @@ class Park
   end
 
   def add_trail(trail)
+    @trails << trail
   end
 end
