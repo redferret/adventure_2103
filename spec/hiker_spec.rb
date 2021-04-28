@@ -28,16 +28,16 @@ describe Hiker do
       hiker.pack('water', 1)
       hiker.pack('trail mix', 3)
       expected_snacks = {
-        'water': 1,
-        'trail mix', 3
+        'water'=> 1,
+        'trail mix'=> 3
       }
 
       expect(hiker.snacks).to eq expected_snacks
 
       hiker.pack('water', 1)
       expected_snacks = {
-        'water': 2,
-        'trail mix', 3
+        'water'=> 2,
+        'trail mix'=> 3
       }
 
       expect(hiker.snacks).to eq expected_snacks

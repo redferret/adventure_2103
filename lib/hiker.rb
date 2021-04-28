@@ -7,6 +7,7 @@ class Hiker
     @snacks = Hash.new(0)
   end
 
-  def pack(snack)
+  def pack(snack_name, quantity)
+    @snacks[snack_name] += quantity
   end
 end
