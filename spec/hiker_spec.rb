@@ -43,4 +43,20 @@ describe Hiker do
       expect(hiker.snacks).to eq expected_snacks
     end
   end
+
+  describe '#visit' do
+    it 'lets hiker visit a park and records it in a list' do
+      hiker = Hiker.new('Dora', :moderate)
+
+      park1 = instance_double('Park')
+      park2 = instance_double('Park')
+
+      hiker.visit(park1)
+      hiker.visit(park2)
+
+      expected_visited = [park1, park2]
+
+      expect(hiker.parks_visited).to eq expected_visited
+    end
+  end
 end

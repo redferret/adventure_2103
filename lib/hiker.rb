@@ -1,5 +1,5 @@
 class Hiker
-  attr_reader :name, :experience_level, :snacks
+  attr_reader :name, :experience_level, :snacks, :parks_visited
 
   def initialize(name, experience_level)
     @name = name
@@ -9,5 +9,8 @@ class Hiker
 
   def pack(snack_name, quantity)
     @snacks[snack_name] += quantity
+  end
+
+  def visit(park)
   end
 end
