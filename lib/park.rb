@@ -15,4 +15,7 @@ class Park
       trail.length < miles
     end
   end
+
+  def hikable_miles
+  end
 end

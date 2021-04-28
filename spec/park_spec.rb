@@ -55,4 +55,24 @@ describe Park do
       expect(results).to eq expected_trails
     end
   end
+
+  describe '#hikable_miles' do
+    it 'returns the sum of all the trails\' miles' do
+      park = Park.new('Capitol Reef')
+
+      trail1 = instance_double('Trail', length: 2.2)
+      trail2 = instance_double('Trail', length: 3.5)
+      trail3 = instance_double('Trail', length: 1.2)
+      trail4 = instance_double('Trail', length: 5.5)
+
+      park.add_trail(trail1)
+      park.add_trail(trail2)
+      park.add_trail(trail3)
+      park.add_trail(trail4)
+
+      expected_length = 12.4
+
+      expect(park.hikable_miles).to eq expected_length
+    end
+  end
 end
