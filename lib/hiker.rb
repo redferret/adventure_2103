@@ -17,7 +17,8 @@ class Hiker
   end
 
   def favorite_snack
-    max_value = @snacks.values.max
-    @snacks.key(max_value)
+    @snacks.max_by do |snack, count|
+      count
+    end.first
   end
 end
