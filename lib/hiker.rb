@@ -5,6 +5,7 @@ class Hiker
     @name = name
     @experience_level = experience_level
     @snacks = Hash.new(0)
+    @parks_visited = []
   end
 
   def pack(snack_name, quantity)
@@ -12,5 +13,6 @@ class Hiker
   end
 
   def visit(park)
+    @parks_visited << park
   end
 end
