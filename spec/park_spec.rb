@@ -103,4 +103,25 @@ describe Park do
       expect(park.trails_by_level).to eq expected_trails_by_level
     end
   end
+
+  describe '#find_trails_by_level' do
+    it 'finds trails by the given level' do
+      park = Park.new('Capitol Reef')
+
+      trail1 = instance_double('Trail', level: :easy)
+      trail2 = instance_double('Trail', level: :moderate)
+      trail3 = instance_double('Trail', level: :moderate)
+      trail4 = instance_double('Trail', level: :strenuous)
+
+      park.add_trail(trail1)
+      park.add_trail(trail2)
+      park.add_trail(trail3)
+      park.add_trail(trail4)
+
+      expected_trails = [trail2, trail3]
+      actual_trails = park.find_trails_by_level(:moderate)
+
+      expect(actual_trails).to eq expected_trails
+    end
+  end
 end
