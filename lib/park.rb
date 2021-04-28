@@ -17,5 +17,6 @@ class Park
   end
 
   def hikable_miles
+    @trails.sum(&:length)
   end
 end
