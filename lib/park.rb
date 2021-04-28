@@ -9,4 +9,7 @@ class Park
   def add_trail(trail)
     @trails << trail
   end
+
+  def trails_shorter_than(miles)
+  end
 end
