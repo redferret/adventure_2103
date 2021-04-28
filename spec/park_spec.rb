@@ -12,5 +12,10 @@ describe Park do
       park = Park.new('Capitol Reef')
       expect(park.name).to eq 'Capitol Reef'
     end
+
+    it 'has trails' do
+      park = Park.new('Capitol Reef')
+      expect(park.trails).to eq []
+    end
   end
 end
