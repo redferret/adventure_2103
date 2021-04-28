@@ -22,7 +22,7 @@ describe Trail do
       })
 
       expect(trail.name).to eq 'Grand Wash'
-      expect(trail.length).to eq '2.2 miles'
+      expect(trail.length).to eq 2.2
       expect(trail.level).to eq(:easy)
     end
   end
