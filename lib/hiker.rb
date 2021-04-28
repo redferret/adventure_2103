@@ -7,4 +7,6 @@ class Hiker
     @snacks = Hash.new(0)
   end
 
+  def pack(snack)
+  end
 end
