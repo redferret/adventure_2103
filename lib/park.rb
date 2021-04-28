@@ -5,4 +5,7 @@ class Park
     @name = name
     @trails = []
   end
+
+  def add_trail(trail)
+  end
 end
