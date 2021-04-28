@@ -11,5 +11,8 @@ class Park
   end
 
   def trails_shorter_than(miles)
+    @trails.find_all do |trail|
+      trail.length < miles
+    end
   end
 end

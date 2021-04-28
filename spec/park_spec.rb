@@ -44,6 +44,11 @@ describe Park do
       trail3 = instance_double('Trail', length: 1.2)
       trail4 = instance_double('Trail', length: 5.5)
 
+      park.add_trail(trail1)
+      park.add_trail(trail2)
+      park.add_trail(trail3)
+      park.add_trail(trail4)
+
       expected_trails = [trail1, trail3]
       results = park.trails_shorter_than(3.0)
 
